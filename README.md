@@ -9,7 +9,7 @@ Data is obtained from [the Barcelona opendata webpage](https://opendata-ajuntame
 
 To download the data, run:
 
-    python prepare_data.py <downloaded_data_folder_path>
+    python prepare_data.py
 
 ## Data Gathering
 
