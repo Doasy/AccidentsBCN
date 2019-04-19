@@ -11,7 +11,7 @@ First, the user should manually download all data from [the Barcelona opendata w
 
 After downloading the data and keep it in a folder, run the script "prepare_data.py" with one argument: the path of the folder where the data is.
 
-    python prepare_data.py downloaded_data_folder_path
+    python prepare_data.py <downloaded_data_folder_path>
 
 # Data Gathering
 
