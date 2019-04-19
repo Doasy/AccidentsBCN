@@ -1,7 +1,7 @@
 # Accidents BCN
 
 This project takes data published by Barcelona's council, about accidents in the city.
-Currently, the project only makes the data gathering and cleaning.
+Currently, the project download, clean and prepare the data.
 
 ## Data
 
