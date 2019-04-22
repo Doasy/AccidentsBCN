@@ -16,6 +16,13 @@ def create_folders():
         os.mkdir('data/tipus')
     if not os.path.exists('data/vehicles'):
         os.mkdir('data/vehicles')
+    if not os.path.exists('data/districtes_i_barris'):
+        os.mkdir('data/districtes_i_barris')		
+    if not os.path.exists('data/domicilis_sexe'):
+        os.mkdir('data/domicilis_sexe')				
+    if not os.path.exists('data/padro_ocupacio'):
+        os.mkdir('data/padro_ocupacio')		
+				
 
 def download_accidents():
     accidents2010 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/e769eb9d-d778-4cd7-9e3a-5858bba49b20/resource/40838699-52ea-4e87-9e68-d9244ad10d9c/download/2010_ACCIDENTS_GU_BCN_.csv', encoding='ISO-8859-1')
@@ -121,6 +128,54 @@ def download_vehicles():
     vehicles2018 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/317e3743-fb79-4d2f-a128-5f12d2c9a55a/resource/6e2daeb5-e359-43ad-b0b5-7fdf438c8d6f/download/2018_accidents_vehicles_gu_bcn_.csv')
     vehicles2018.to_csv('data/vehicles/2018.csv', index=False)
 
+def download_districtes_i_barris():	
+    districtes_i_barris = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/4cc59b76-a977-40ac-8748-61217c8ff367/download/districtes_i_barris_170705.csv', encoding='ISO-8859-1')
+    districtes_i_barris.to_csv('data/districtes_i_barris/general.csv', index=False)
+    
+def download_domicilis_sexe():
+    domicilis_sexe2010 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/7263eea4-50e2-4fc4-a4f3-a9ab6cf8d7fd/resource/1979024c-496c-4086-864d-0d02b6a20c10/download/2010_domicilis_sexe.csv', encoding='ISO-8859-1')
+    domicilis_sexe2010.to_csv('data/domicilis_sexe/2010.csv', index=False)
+    domicilis_sexe2011 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/7263eea4-50e2-4fc4-a4f3-a9ab6cf8d7fd/resource/c8c29362-d8d2-4882-ae2f-3f7fd1769148/download/2011_domicilis_sexe.csv', encoding='ISO-8859-1')
+    domicilis_sexe2011.to_csv('data/domicilis_sexe/2011.csv', index=False)
+    domicilis_sexe2012 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/7263eea4-50e2-4fc4-a4f3-a9ab6cf8d7fd/resource/71052747-9ee7-4db9-bcaf-8bdce33f937c/download/2012_domicilis_sexe.csv', encoding='ISO-8859-1')
+    domicilis_sexe2012.to_csv('data/domicilis_sexe/2012.csv', index=False)
+    domicilis_sexe2013 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/7263eea4-50e2-4fc4-a4f3-a9ab6cf8d7fd/resource/ef4e24f3-bdbe-40cc-ad30-cdec5bb32273/download/2013_domicilis_sexe.csv', encoding='ISO-8859-1')
+    domicilis_sexe2013.to_csv('data/domicilis_sexe/2013.csv', index=False)
+    domicilis_sexe2014 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/7263eea4-50e2-4fc4-a4f3-a9ab6cf8d7fd/resource/ef5054aa-e75e-4804-9090-c1dc50c0cd44/download/2014_domicilis_sexe.csv', encoding='ISO-8859-1')
+    domicilis_sexe2014.to_csv('data/domicilis_sexe/2014.csv', index=False)
+    domicilis_sexe2015 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/7263eea4-50e2-4fc4-a4f3-a9ab6cf8d7fd/resource/ba0453fd-2d7f-43ca-88c7-f9d2dedd2200/download/2015_domicilis_sexe.csv', encoding='ISO-8859-1')
+    domicilis_sexe2015.to_csv('data/domicilis_sexe/2015.csv', index=False)
+    domicilis_sexe2016 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/7263eea4-50e2-4fc4-a4f3-a9ab6cf8d7fd/resource/64f5c35d-53f6-4602-b39b-0677a78c9772/download/2016_domicilis_sexe.csv', encoding='ISO-8859-1')
+    domicilis_sexe2016.to_csv('data/domicilis_sexe/2016.csv', index=False)
+    domicilis_sexe2017 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/7263eea4-50e2-4fc4-a4f3-a9ab6cf8d7fd/resource/35c3c8bb-0c02-4caf-ac3d-7ca728bbd978/download/2017_domicilis_sexe.csv', encoding='ISO-8859-1')
+    domicilis_sexe2017.to_csv('data/domicilis_sexe/2017.csv', index=False)
+    domicilis_sexe2018 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/7263eea4-50e2-4fc4-a4f3-a9ab6cf8d7fd/resource/46bf0abf-3159-4985-bfbf-ee861777f987/download/2018_domicilis_sexe.csv', encoding='ISO-8859-1')
+    domicilis_sexe2018.to_csv('data/domicilis_sexe/2018.csv', index=False)
+	
+	
+def download_padro_ocupacio():
+    padro_ocupacio2010 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/56568d9d-651a-49ff-bbc8-52d3fcee4421/resource/00393c1a-787a-4010-8271-9de1e577864f/download/2010_padro_ocupacio_mitjana.csv', encoding='ISO-8859-1')
+    padro_ocupacio2010.to_csv('data/padro_ocupacio/2010.csv', index=False)
+    padro_ocupacio2011 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/56568d9d-651a-49ff-bbc8-52d3fcee4421/resource/c6b17c2a-22b9-4fa2-82d9-b3f421c3cda9/download/2011_padro_ocupacio_mitjana.csv', encoding='ISO-8859-1')
+    padro_ocupacio2011.to_csv('data/padro_ocupacio/2011.csv', index=False)
+    padro_ocupacio2012 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/56568d9d-651a-49ff-bbc8-52d3fcee4421/resource/05d44dab-d990-4a94-b928-94a2e9029898/download/2012_padro_ocupacio_mitjana.csv', encoding='ISO-8859-1')
+    padro_ocupacio2012.to_csv('data/padro_ocupacio/2012.csv', index=False)
+    padro_ocupacio2013 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/56568d9d-651a-49ff-bbc8-52d3fcee4421/resource/a7b513a3-e7d2-4540-8440-c2d5230d0bed/download/2013_padro_ocupacio_mitjana.csv', encoding='ISO-8859-1')
+    padro_ocupacio2013.to_csv('data/padro_ocupacio/2013.csv', index=False)
+    padro_ocupacio2014 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/56568d9d-651a-49ff-bbc8-52d3fcee4421/resource/eb70ef29-0c39-4854-8e54-ff3a9c5e8dd1/download/2014_padro_ocupacio_mitjana.csv', encoding='ISO-8859-1')
+    padro_ocupacio2014.to_csv('data/padro_ocupacio/2014.csv', index=False)
+    padro_ocupacio2015 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/56568d9d-651a-49ff-bbc8-52d3fcee4421/resource/687d9f5b-9afc-475c-baae-e251f646d891/download/2015_padro_ocupacio_mitjana.csv', encoding='ISO-8859-1')
+    padro_ocupacio2015.to_csv('data/padro_ocupacio/2015.csv', index=False)
+    padro_ocupacio2016 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/56568d9d-651a-49ff-bbc8-52d3fcee4421/resource/310f5907-3c49-4cad-b1f6-e4c2c7c01a37/download/2016_padro_ocupacio_mitjana.csv', encoding='ISO-8859-1')
+    padro_ocupacio2016.to_csv('data/padro_ocupacio/2016.csv', index=False)
+    padro_ocupacio2017 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/56568d9d-651a-49ff-bbc8-52d3fcee4421/resource/23c7f642-1a46-4cc2-aa42-abe93562c3f7/download/2017_padro_ocupacio_mitjana.csv', encoding='ISO-8859-1')
+    padro_ocupacio2017.to_csv('data/padro_ocupacio/2017.csv', index=False)
+    padro_ocupacio2018 = pd.read_csv('https://opendata-ajuntament.barcelona.cat/data/dataset/56568d9d-651a-49ff-bbc8-52d3fcee4421/resource/6588f621-b882-4164-ac88-c5bc54a1a788/download/2018_padro_ocupacio_mitjana.csv', encoding='ISO-8859-1')
+    padro_ocupacio2018.to_csv('data/padro_ocupacio/2018.csv', index=False)
+    
+    
+
+
 if __name__ == "__main__":
     create_folders()
     download_accidents()
@@ -128,3 +183,6 @@ if __name__ == "__main__":
     download_persones()
     download_tipus()
     download_vehicles()
+    download_districtes_i_barris()
+    download_domicilis_sexe()
+    download_padro_ocupacio()
