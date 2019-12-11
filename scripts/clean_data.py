@@ -73,6 +73,7 @@ vehicles2010 = vehicles2010.apply(lambda x: x.str.replace('‡', 'ç'), axis=1)
 vehicles2010 = vehicles2010.apply(lambda x: x.str.replace('¢', 'ó'), axis=1)
 vehicles2010 = vehicles2010.apply(lambda x: x.str.replace('…', 'à'), axis=1)
 vehicles2010 = vehicles2010.apply(lambda x: x.str.replace('£', 'ú'), axis=1)
+vehicles2010['Descripció tipus de vehicle'] = vehicles2010['Descripció tipus de vehicle'].str.replace('Turisme', 'Turismo')
 vehicles.append(vehicles2010)
 
 accidents2011 = pd.read_csv('../data/accidents/2011.csv')
@@ -122,6 +123,7 @@ vehicles2011 = vehicles2011.apply(lambda x: x.str.replace('‡', 'ç'), axis=1)
 vehicles2011 = vehicles2011.apply(lambda x: x.str.replace('¢', 'ó'), axis=1)
 vehicles2011 = vehicles2011.apply(lambda x: x.str.replace('…', 'à'), axis=1)
 vehicles2011 = vehicles2011.apply(lambda x: x.str.replace('£', 'ú'), axis=1)
+vehicles2011['Descripció tipus de vehicle'] = vehicles2011['Descripció tipus de vehicle'].str.replace('Turisme', 'Turismo')
 vehicles.append(vehicles2011)
 
 
@@ -176,6 +178,7 @@ vehicles2012 = vehicles2012.apply(lambda x: x.str.replace('‡', 'ç'), axis=1)
 vehicles2012 = vehicles2012.apply(lambda x: x.str.replace('¢', 'ó'), axis=1)
 vehicles2012 = vehicles2012.apply(lambda x: x.str.replace('…', 'à'), axis=1)
 vehicles2012 = vehicles2012.apply(lambda x: x.str.replace('£', 'ú'), axis=1)
+vehicles2012['Descripció tipus de vehicle'] = vehicles2012['Descripció tipus de vehicle'].str.replace('Turisme', 'Turismo')
 vehicles.append(vehicles2012)
 
 
@@ -230,6 +233,7 @@ vehicles2013 = vehicles2013.apply(lambda x: x.str.replace('‡', 'ç'), axis=1)
 vehicles2013 = vehicles2013.apply(lambda x: x.str.replace('¢', 'ó'), axis=1)
 vehicles2013 = vehicles2013.apply(lambda x: x.str.replace('…', 'à'), axis=1)
 vehicles2013 = vehicles2013.apply(lambda x: x.str.replace('£', 'ú'), axis=1)
+vehicles2013['Descripció tipus de vehicle'] = vehicles2013['Descripció tipus de vehicle'].str.replace('Turisme', 'Turismo')
 vehicles.append(vehicles2013)
 
 
@@ -291,6 +295,7 @@ vehicles2014 = vehicles2014.apply(lambda x: x.str.replace('‡', 'ç'), axis=1)
 vehicles2014 = vehicles2014.apply(lambda x: x.str.replace('¢', 'ó'), axis=1)
 vehicles2014 = vehicles2014.apply(lambda x: x.str.replace('…', 'à'), axis=1)
 vehicles2014 = vehicles2014.apply(lambda x: x.str.replace('£', 'ú'), axis=1)
+vehicles2014['Descripció tipus de vehicle'] = vehicles2014['Descripció tipus de vehicle'].str.replace('Turisme', 'Turismo')
 vehicles.append(vehicles2014)
 
 
@@ -326,6 +331,7 @@ persones.append(persones2015)
 
 vehicles2015 = pd.read_csv('../data/vehicles/2015.csv')[['Codi d\'expedient', 'Descripció tipus de vehicle', 'Descripció model', 'Descripció marca', 'Descripció color', 'Descripció carnet', 'Antiguitat carnet']]
 vehicles2015.columns = ['Número d\'expedient', 'Descripció tipus de vehicle', 'Descripció model', 'Descripció marca', 'Descripció color', 'Descripció carnet', 'Antiguitat carnet']
+vehicles2015['Descripció tipus de vehicle'] = vehicles2015['Descripció tipus de vehicle'].str.replace('Turisme', 'Turismo')
 vehicles.append(vehicles2015)
 
 
@@ -367,6 +373,7 @@ vehicles2016 = pd.read_csv('../data/vehicles/2016.csv')[['Codi_expedient',
        'Descripcio_tipus_vehicle', 'Descripcio_model', 'Descripcio_marca',
        'Descripcio_color', 'Descripcio_carnet', 'Antiguitat_carnet']]
 vehicles2016.columns = ['Número d\'expedient', 'Descripció tipus de vehicle', 'Descripció model', 'Descripció marca', 'Descripció color', 'Descripció carnet', 'Antiguitat carnet']
+vehicles2016['Descripció tipus de vehicle'] = vehicles2016['Descripció tipus de vehicle'].str.replace('Turisme', 'Turismo')
 vehicles.append(vehicles2016)
 
 
@@ -409,6 +416,7 @@ vehicles2017 = pd.read_csv('../data/vehicles/2017.csv')[['Codi_expedient',
        'Descripcio_tipus_vehicle', 'Descripcio_model', 'Descripcio_marca',
        'Descripcio_color', 'Descripcio_carnet', 'Antiguitat_carnet']]
 vehicles2017.columns = ['Número d\'expedient', 'Descripció tipus de vehicle', 'Descripció model', 'Descripció marca', 'Descripció color', 'Descripció carnet', 'Antiguitat carnet']
+vehicles2017['Descripció tipus de vehicle'] = vehicles2017['Descripció tipus de vehicle'].str.replace('Turisme', 'Turismo')
 vehicles.append(vehicles2017)
 
 
@@ -450,6 +458,7 @@ vehicles2018 = pd.read_csv('../data/vehicles/2018.csv')[['Codi_expedient',
        'Descripcio_tipus_vehicle', 'Descripcio_model', 'Descripcio_marca',
        'Descripcio_color', 'Descripcio_carnet', 'Antiguitat_carnet']]
 vehicles2018.columns = ['Número d\'expedient', 'Descripció tipus de vehicle', 'Descripció model', 'Descripció marca', 'Descripció color', 'Descripció carnet', 'Antiguitat carnet']
+vehicles2018['Descripció tipus de vehicle'] = vehicles2018['Descripció tipus de vehicle'].str.replace('Turisme', 'Turismo')
 vehicles.append(vehicles2018)
 
 
