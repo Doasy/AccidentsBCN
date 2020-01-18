@@ -15,13 +15,13 @@ def expertise_definer(row):
 
 def extract_vehicles_info(df, vehicles):
     df = df.merge(vehicles, how='inner', on="Número d'expedient")
-    df.rename({'Any_x': 'any', "Descripció tipus de vehicle": 'tipus_vehicle',
+    df.rename({'Any_x': 'any', "Descripció tipus de vehicle": 'tipus_vehicle', 'Descripció model': 'model',
                'Descripció marca': 'marca', "Descripció color": 'color_vehicle', 'Descripció carnet': 'tipus_carnet',
                'Antiguitat carnet': 'antiguitat_carnet'}, axis=1, inplace=True)
     df.drop(df.loc[df.antiguitat_carnet == 'Desconegut'].index, axis=0, inplace=True)
     df.antiguitat_carnet = df.antiguitat_carnet.astype('int')
     df['expertesa_carnet'] = df.antiguitat_carnet.apply(expertise_definer)
-    df.drop(['Any_y', 'antiguitat_carnet'], axis=1, inplace=True)
+    df.drop(['Any_y', 'antiguitat_carnet', 'model'], axis=1, inplace=True)
     return df
 
 
