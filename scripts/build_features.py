@@ -40,13 +40,6 @@ def driver_info(df, driver):
     return df
 
 
-# nombre d'accidents donat un perfil
-def accidents_number(df):
-    print(df.groupby(['any', 'tipus_vehicle', 'model', 'marca', 'color_vehicle',
-       'tipus_carnet', 'expertesa_carnet', 'genere', 'rang_edat']).size())
-    # no contar accidents, sino fer un factor de risc. Aplicar factor de risc a differents agrupacions
-    return df
-
 
 if __name__ == '__main__':
     if not os.path.exists('../data/final'):
@@ -57,5 +50,4 @@ if __name__ == '__main__':
     df = pd.DataFrame(accidents["Any"])
     (df.pipe(extract_vehicles_info, vehicles)
      .pipe(driver_info, persones)
-     .pipe(accidents_number)
      .to_csv('../data/final/featured.csv'))
