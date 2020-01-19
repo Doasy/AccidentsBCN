@@ -7,10 +7,9 @@ Currently, the project download, clean and prepare the data.
 
 Data is obtained from [the Barcelona opendata webpage](https://opendata-ajuntament.barcelona.cat/data/en/dataset?q=accidents&sort=fecha_publicacion+desc).
 
-To download the data, run:
+To download and clean the data, run:
 
-    python scripts/download_data.py
-
-## Data Cleaning-Transform
-
-The necessary data transformations are made using the scripts in the /scripts directory 
+1. python scripts/download_data.py
+2. python scripts/clean_data.py
+3. python scripts/merge_data.py
+4. python scripts/build_features.py

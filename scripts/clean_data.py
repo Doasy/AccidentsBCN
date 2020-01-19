@@ -61,6 +61,7 @@ tipus.append(tipus2010)
 
 
 persones2010 = pd.read_csv('../data/row/2010/persones.csv')[['Número d\'expedient','Descripció causa vianant',  'Desc. Tipus vehicle implicat', 'Descripció sexe', 'Descripció tipus persona', 'Edat', 'Descripció victimització']]
+persones2010['Número d\'expedient'] = persones2010['Número d\'expedient'].str.replace(' ', '', regex=False)
 persones.append(persones2010)
 
 
@@ -111,6 +112,7 @@ tipus2011['Descripció tipus accident'] = tipus2011['Descripció tipus accident'
 tipus.append(tipus2011)
 
 persones2011 = pd.read_csv('../data/row/2011/persones.csv')[['Número d\'expedient','Descripció causa vianant',  'Desc. Tipus vehicle implicat', 'Descripció sexe', 'Descripció tipus persona', 'Edat', 'Descripció victimització']]
+persones2011['Número d\'expedient'] = persones2011['Número d\'expedient'].str.replace(' ', '', regex=False)
 persones.append(persones2011)
 
 
@@ -166,6 +168,7 @@ tipus.append(tipus2012)
 
 
 persones2012 = pd.read_csv('../data/row/2012/persones.csv')[['Número d\'expedient','Descripció causa vianant',  'Desc. Tipus vehicle implicat', 'Descripció sexe', 'Descripció tipus persona', 'Edat', 'Descripció victimització']]
+persones2012['Número d\'expedient'] = persones2012['Número d\'expedient'].str.replace(' ', '', regex=False)
 persones.append(persones2012)
 
 
@@ -221,6 +224,7 @@ tipus.append(tipus2013)
 
 
 persones2013 = pd.read_csv('../data/row/2013/persones.csv')[['Número d\'expedient','Descripció causa vianant',  'Desc. Tipus vehicle implicat', 'Descripció sexe', 'Descripció tipus persona', 'Edat', 'Descripció victimització']]
+persones2013['Número d\'expedient'] = persones2013['Número d\'expedient'].str.replace(' ', '', regex=False)
 persones.append(persones2013)
 
 
@@ -283,6 +287,7 @@ persones2014 = persones2014.apply(lambda x: x.str.replace('‡', 'ç'), axis=1)
 persones2014 = persones2014.apply(lambda x: x.str.replace('¢', 'ó'), axis=1)
 persones2014 = persones2014.apply(lambda x: x.str.replace('…', 'à'), axis=1)
 persones2014 = persones2014.apply(lambda x: x.str.replace('£', 'ú'), axis=1)
+persones2014['Número d\'expedient'] = persones2014['Número d\'expedient'].str.replace(' ', '', regex=False)
 persones.append(persones2014)
 
 
@@ -325,6 +330,7 @@ tipus.append(tipus2015)
 
 
 persones2015 = pd.read_csv('../data/row/2015/persones.csv')[['Número d\'expedient','Descripció causa vianant',  'Desc. Tipus vehicle implicat', 'Descripció sexe', 'Descripció tipus persona', 'Edat', 'Descripció victimització']]
+persones2015['Número d\'expedient'] = persones2015['Número d\'expedient'].str.replace(' ', '', regex=False)
 persones.append(persones2015)
 
 
@@ -365,6 +371,7 @@ tipus.append(tipus2016)
 persones2016 = pd.read_csv('../data/row/2016/persones.csv')[['Numero_expedient', 'Descripcio_causa_vianant', 'Desc_Tipus_vehicle_implicat',
        'Descripcio_sexe', 'Descripcio_tipus_persona', 'Edat', 'Descripcio_victimitzacio']]
 persones2016.columns= ['Número d\'expedient','Descripció causa vianant',  'Desc. Tipus vehicle implicat', 'Descripció sexe', 'Descripció tipus persona', 'Edat', 'Descripció victimització']
+persones2016['Número d\'expedient'] = persones2016['Número d\'expedient'].str.replace(' ', '', regex=False)
 persones.append(persones2016)
 
 
@@ -408,6 +415,7 @@ tipus.append(tipus2017)
 persones2017 = pd.read_csv('../data/row/2017/persones.csv')[['Numero_expedient', 'Descripcio_causa_vianant', 'Desc_Tipus_vehicle_implicat',
        'Descripcio_sexe', 'Edat', 'Descripcio_tipus_persona', 'Descripcio_victimitzacio']]
 persones2017.columns= ['Número d\'expedient','Descripció causa vianant',  'Desc. Tipus vehicle implicat', 'Descripció sexe', 'Descripció tipus persona', 'Edat', 'Descripció victimització']
+persones2017['Número d\'expedient'] = persones2017['Número d\'expedient'].str.replace(' ', '', regex=False)
 persones.append(persones2017)
 
 
@@ -450,6 +458,7 @@ tipus.append(tipus2018)
 persones2018 = pd.read_csv('../data/row/2018/persones.csv')[['Numero_expedient', 'Descripcio_causa_vianant', 'Desc_Tipus_vehicle_implicat',
        'Descripcio_sexe', 'Edat', 'Descripcio_tipus_persona', 'Descripcio_victimitzacio']]
 persones2018.columns= ['Número d\'expedient','Descripció causa vianant',  'Desc. Tipus vehicle implicat', 'Descripció sexe', 'Descripció tipus persona', 'Edat', 'Descripció victimització']
+persones2018['Número d\'expedient'] = persones2018['Número d\'expedient'].str.replace(' ', '', regex=False)
 persones.append(persones2018)
 
 
