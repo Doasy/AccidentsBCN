@@ -16,3 +16,5 @@ To download and clean the data, run:
 
 
 **The data needed to execute the final notebook is stored in the data/final/featured.csv**
+
+**The final notebook is in the /notebooks directory**
