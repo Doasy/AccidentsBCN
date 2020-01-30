@@ -13,3 +13,6 @@ To download and clean the data, run:
 2. python scripts/clean_data.py
 3. python scripts/merge_data.py
 4. python scripts/build_features.py
+
+
+**The data needed to execute the final notebook is stored in the data/final/featured.csv**
